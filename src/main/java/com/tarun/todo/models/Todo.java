@@ -9,13 +9,13 @@ public class Todo {
     private String Title;
     private int id;
     private String content;
-    private Status status;
+    private String status;
 
     private Date addedDate;
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date todoDate;
 
-    public Todo(String title, int id, String content, Status status,Date addedDate,Date todoDate) {
+    public Todo(String title, int id, String content, String status,Date addedDate,Date todoDate) {
         Title = title;
         this.id = id;
         this.content = content;
@@ -50,11 +50,11 @@ public class Todo {
         this.content = content;
     }
 
-    public Status getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
